@@ -13,6 +13,17 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
 .row {
   max-width: 1140px;
   margin: 0 auto;
@@ -24,6 +35,7 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  background-attachment: fixed;
 }
 .hero-text-box {
   /*Ovo je glavni text box koji prvi vidimo */
@@ -60,7 +72,7 @@ h1 {
 }
 
 h2 {
-  font-size: 180%;
+  font-size: 200%;
   word-spacing: 2px;
   text-align: center;
   margin-bottom: 30px;
@@ -138,6 +150,7 @@ h3 {
   border: 1px solid #cf6d17;
   color: #fff;
 }
+
 /*logo fix/color/position/ */
 .logo {
   height: 100px;
@@ -207,17 +220,30 @@ h3 {
 
 /* Deo HOW IT WORKS */
 
+.section-steps {
+  background-color: #f4f4f4;
+}
+
 .steps-box:first-child {
-  text-align: left;
+  text-align: right;
   padding-right: 3%;
   margin-top: 30px;
 }
+
 .steps-box:last-child {
   padding-left: 3%;
-  margin-top: 70px;
+  padding-top: 70%;
 }
 .app-screen {
-  width: 50%;
+  width: 40%;
+  margin-left: 50%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+}
+.works-step:last-of-type {
+  margin-bottom: 80px;
 }
 
 .works-step div {
@@ -225,11 +251,100 @@ h3 {
   border: 2px solid #e67e22;
   display: inline-block;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 55px;
   text-align: center;
   padding: 5px;
   float: left;
   font-size: 150%;
-  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* GRADOVI SEKCIJA */
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 7px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: centar;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+a:link,
+a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #e67e22;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+/* TESTIMONIALS SEKCIJA USER REVIEW! */
+
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(img/back-customers.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -3%;
+  left: -5px;
+}
+
+cite img {
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
 }
